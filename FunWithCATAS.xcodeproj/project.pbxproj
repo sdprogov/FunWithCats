@@ -21,6 +21,10 @@
 		CB67CC612922EA7300FEAA21 /* SwiftUIPager in Frameworks */ = {isa = PBXBuildFile; productRef = CB67CC602922EA7300FEAA21 /* SwiftUIPager */; };
 		CB67CC6429234AF200FEAA21 /* AnimatedImage in Frameworks */ = {isa = PBXBuildFile; productRef = CB67CC6329234AF200FEAA21 /* AnimatedImage */; };
 		CB67CC6729234E0C00FEAA21 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = CB67CC6629234E0C00FEAA21 /* SDWebImageSwiftUI */; };
+		CB93F0A82923DB5E00D58596 /* CatsFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB93F0A72923DB5E00D58596 /* CatsFilterViewModel.swift */; };
+		CB93F0AA2923DBFF00D58596 /* CatsFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB93F0A92923DBFF00D58596 /* CatsFilterView.swift */; };
+		CB93F0AC2923DFEC00D58596 /* FlexibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB93F0AB2923DFEC00D58596 /* FlexibleView.swift */; };
+		CB93F0AE2923E0A300D58596 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB93F0AD2923E0A300D58596 /* View+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,10 @@
 		CB5E95592922E22000D71404 /* Cats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cats.swift; sourceTree = "<group>"; };
 		CB5E95602922E43B00D71404 /* CatsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsViewModel.swift; sourceTree = "<group>"; };
 		CB5E95622922E65300D71404 /* CatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsView.swift; sourceTree = "<group>"; };
+		CB93F0A72923DB5E00D58596 /* CatsFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsFilterViewModel.swift; sourceTree = "<group>"; };
+		CB93F0A92923DBFF00D58596 /* CatsFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsFilterView.swift; sourceTree = "<group>"; };
+		CB93F0AB2923DFEC00D58596 /* FlexibleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibleView.swift; sourceTree = "<group>"; };
+		CB93F0AD2923E0A300D58596 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +174,8 @@
 				CB5E955F2922E40900D71404 /* ViewModels */,
 				CB5E955C2922E37F00D71404 /* View Helpers */,
 				CB5E95622922E65300D71404 /* CatsView.swift */,
+				CB93F0A92923DBFF00D58596 /* CatsFilterView.swift */,
+				CB93F0AB2923DFEC00D58596 /* FlexibleView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -173,6 +183,7 @@
 		CB5E955C2922E37F00D71404 /* View Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				CB93F0AD2923E0A300D58596 /* View+Extension.swift */,
 			);
 			path = "View Helpers";
 			sourceTree = "<group>";
@@ -181,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				CB5E95602922E43B00D71404 /* CatsViewModel.swift */,
+				CB93F0A72923DB5E00D58596 /* CatsFilterViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -327,7 +339,11 @@
 			files = (
 				CB5E95572922DD4900D71404 /* API+Constants.swift in Sources */,
 				CB5E955A2922E22000D71404 /* Cats.swift in Sources */,
+				CB93F0AE2923E0A300D58596 /* View+Extension.swift in Sources */,
 				CB5E95612922E43B00D71404 /* CatsViewModel.swift in Sources */,
+				CB93F0AA2923DBFF00D58596 /* CatsFilterView.swift in Sources */,
+				CB93F0AC2923DFEC00D58596 /* FlexibleView.swift in Sources */,
+				CB93F0A82923DB5E00D58596 /* CatsFilterViewModel.swift in Sources */,
 				CB5E95262922D95800D71404 /* FunWithCATASApp.swift in Sources */,
 				CB5E95552922DD0E00D71404 /* APIClient.swift in Sources */,
 				CB5E95632922E65300D71404 /* CatsView.swift in Sources */,

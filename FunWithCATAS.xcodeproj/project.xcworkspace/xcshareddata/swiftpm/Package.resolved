@@ -1,0 +1,41 @@
+{
+  "pins" : [
+    {
+      "identity" : "sdwebimage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SDWebImage/SDWebImage.git",
+      "state" : {
+        "revision" : "3312bf5e67b52fbce7c3caf431b0cda721a9f7bb",
+        "version" : "5.14.2"
+      }
+    },
+    {
+      "identity" : "sdwebimageswiftui",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SDWebImage/SDWebImageSwiftUI.git",
+      "state" : {
+        "revision" : "ed288667c909c89127ab1b690113a3e397af3098",
+        "version" : "2.2.1"
+      }
+    },
+    {
+      "identity" : "swiftui.animatedimage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/krzyzanowskim/SwiftUI.AnimatedImage",
+      "state" : {
+        "branch" : "main",
+        "revision" : "d8ea744fd506cd291b2cd6c5580b806e01ee5912"
+      }
+    },
+    {
+      "identity" : "swiftuipager",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/fermoya/SwiftUIPager.git",
+      "state" : {
+        "revision" : "d99fd8fbaa91dc5622f33a8e99a2e094179ee861",
+        "version" : "1.9.2"
+      }
+    }
+  ],
+  "version" : 2
+}

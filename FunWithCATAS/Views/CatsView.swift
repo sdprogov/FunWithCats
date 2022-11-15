@@ -13,8 +13,7 @@ struct CatsView: View {
     @State private var page: Int = 0
     @StateObject private var viewModel = CatsViewModel()
     @State private var isFilterViewPresented = false
-    @State private var categoryId: String?
-    @State private var breedId: String?
+    @State private var filterTag: String?
 
     private let fakeUrl = URL(string: "https://www.fake.com")!
 
@@ -31,7 +30,7 @@ struct CatsView: View {
                             }
                             .resizable()
                             .placeholder {
-								Color.purple.opacity(0.1)
+                                Color.purple.opacity(0.1)
                             } // Placeholder Image
                             .indicator(SDWebImageActivityIndicator.whiteLarge) // Activity Indicator
                             .transition(.fade) // Fade Transition
@@ -54,7 +53,30 @@ struct CatsView: View {
                 .edgesIgnoringSafeArea(.bottom)
             }
             .navigationBarTitle("Cats!", displayMode: .inline)
+            .navigationBarItems(trailing: filterButton)
         }
+        .sheet(isPresented: $isFilterViewPresented,
+               onDismiss: {
+                   // TODO: implement filtering
+               },
+               content: {
+                   CatsFilterView()
+               })
+    }
+
+    private var isFilterSelected: Bool {
+        filterTag != nil
+    }
+
+    private var filterButton: some View {
+        Button(action: { isFilterViewPresented.toggle() }, label: {
+            Image(systemName: isFilterSelected ? "line.horizontal.3.decrease.circle.fill" : "line.horizontal.3.decrease.circle")
+                .resizable()
+                .frame(width: 25, height: 25)
+                .padding()
+                .foregroundColor(.black)
+                .font(Font.body.weight(.light))
+        })
     }
 }
 

@@ -25,11 +25,14 @@ extension APIClient {
         var host: String { "https://cataas.com" }
 
         case cats(skip: Int, limit: Int)
+        case tags
 
         var path: String {
             switch self {
             case .cats:
                 return "/api/cats"
+            case .tags:
+                return "/api/tags"
             }
         }
 
@@ -40,6 +43,8 @@ extension APIClient {
                     URLQueryItem(name: Params.skip, value: "\(skip)"),
                     URLQueryItem(name: Params.limit, value: "\(limit)"),
                 ]
+            case .tags:
+                return []
             }
         }
 
