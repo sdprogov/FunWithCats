@@ -1,4 +1,4 @@
-# ![Fun with Cats App]
+% Fun with Cats App
 
 
 This codebase was created to showcase my knowledge of [SwiftUI] and [Combine framework] in answering Photobooth's Tech challenge.
@@ -35,4 +35,4 @@ Will display Cat images from the CATAS Api. If these images are animatable, will
 
 * Filtering. Only 1 tag at a time. This can be made to support multiple tags. Will not load more cats from the API while filtering is in place, though this can be amended to do so on subsequent loads.
 
-* FlexibleView. I created this view to display the tags returned by the API, but it's very computationally heavy and causes a noticeable drop in FPS while it does all the computation, this is due to the sheer amount of tags returned by /api/tags. Will need to be refactored later on to be a pager and load the tags incrementally. 
+* FlexibleView. I created this view to display the tags returned by the API, but it's very computationally heavy and causes a noticeable drop in FPS while it does all the computation, this is due to the sheer amount of tags returned by /api/tags. Will need to be refactored later on to be a pager and load the tags incrementally.
