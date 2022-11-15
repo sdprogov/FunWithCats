@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		CB5E95262922D95800D71404 /* FunWithCATASApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5E95252922D95800D71404 /* FunWithCATASApp.swift */; };
-		CB5E95282922D95800D71404 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5E95272922D95800D71404 /* ContentView.swift */; };
 		CB5E952A2922D95B00D71404 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB5E95292922D95B00D71404 /* Assets.xcassets */; };
 		CB5E952D2922D95B00D71404 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB5E952C2922D95B00D71404 /* Preview Assets.xcassets */; };
 		CB5E95372922D95B00D71404 /* FunWithCATASTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5E95362922D95B00D71404 /* FunWithCATASTests.swift */; };
@@ -44,7 +43,6 @@
 /* Begin PBXFileReference section */
 		CB5E95222922D95800D71404 /* FunWithCATAS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunWithCATAS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB5E95252922D95800D71404 /* FunWithCATASApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunWithCATASApp.swift; sourceTree = "<group>"; };
-		CB5E95272922D95800D71404 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CB5E95292922D95B00D71404 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB5E952C2922D95B00D71404 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CB5E95322922D95B00D71404 /* FunWithCATASTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FunWithCATASTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,7 +111,6 @@
 				CB5E955B2922E37100D71404 /* Views */,
 				CB5E95522922D9D000D71404 /* Api */,
 				CB5E95252922D95800D71404 /* FunWithCATASApp.swift */,
-				CB5E95272922D95800D71404 /* ContentView.swift */,
 				CB5E95292922D95B00D71404 /* Assets.xcassets */,
 				CB5E952B2922D95B00D71404 /* Preview Content */,
 			);
@@ -329,7 +326,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB5E95572922DD4900D71404 /* API+Constants.swift in Sources */,
-				CB5E95282922D95800D71404 /* ContentView.swift in Sources */,
 				CB5E955A2922E22000D71404 /* Cats.swift in Sources */,
 				CB5E95612922E43B00D71404 /* CatsViewModel.swift in Sources */,
 				CB5E95262922D95800D71404 /* FunWithCATASApp.swift in Sources */,

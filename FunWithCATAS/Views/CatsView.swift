@@ -31,10 +31,7 @@ struct CatsView: View {
                             }
                             .resizable()
                             .placeholder {
-                                ZStack {
-                                    ProgressView()
-                                    Color.purple.opacity(0.1)
-                                }
+								Color.purple.opacity(0.1)
                             } // Placeholder Image
                             .indicator(SDWebImageActivityIndicator.whiteLarge) // Activity Indicator
                             .transition(.fade) // Fade Transition
