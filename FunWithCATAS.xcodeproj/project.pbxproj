@@ -14,6 +14,14 @@
 		CB5E95372922D95B00D71404 /* FunWithCATASTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5E95362922D95B00D71404 /* FunWithCATASTests.swift */; };
 		CB5E95412922D95B00D71404 /* FunWithCATASUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5E95402922D95B00D71404 /* FunWithCATASUITests.swift */; };
 		CB5E95432922D95B00D71404 /* FunWithCATASUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5E95422922D95B00D71404 /* FunWithCATASUITestsLaunchTests.swift */; };
+		CB5E95552922DD0E00D71404 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5E95542922DD0E00D71404 /* APIClient.swift */; };
+		CB5E95572922DD4900D71404 /* API+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5E95562922DD4900D71404 /* API+Constants.swift */; };
+		CB5E955A2922E22000D71404 /* Cats.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5E95592922E22000D71404 /* Cats.swift */; };
+		CB5E95612922E43B00D71404 /* CatsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5E95602922E43B00D71404 /* CatsViewModel.swift */; };
+		CB5E95632922E65300D71404 /* CatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5E95622922E65300D71404 /* CatsView.swift */; };
+		CB67CC612922EA7300FEAA21 /* SwiftUIPager in Frameworks */ = {isa = PBXBuildFile; productRef = CB67CC602922EA7300FEAA21 /* SwiftUIPager */; };
+		CB67CC6429234AF200FEAA21 /* AnimatedImage in Frameworks */ = {isa = PBXBuildFile; productRef = CB67CC6329234AF200FEAA21 /* AnimatedImage */; };
+		CB67CC6729234E0C00FEAA21 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = CB67CC6629234E0C00FEAA21 /* SDWebImageSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +52,11 @@
 		CB5E953C2922D95B00D71404 /* FunWithCATASUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FunWithCATASUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB5E95402922D95B00D71404 /* FunWithCATASUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunWithCATASUITests.swift; sourceTree = "<group>"; };
 		CB5E95422922D95B00D71404 /* FunWithCATASUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunWithCATASUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CB5E95542922DD0E00D71404 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		CB5E95562922DD4900D71404 /* API+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Constants.swift"; sourceTree = "<group>"; };
+		CB5E95592922E22000D71404 /* Cats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cats.swift; sourceTree = "<group>"; };
+		CB5E95602922E43B00D71404 /* CatsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsViewModel.swift; sourceTree = "<group>"; };
+		CB5E95622922E65300D71404 /* CatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +64,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB67CC6729234E0C00FEAA21 /* SDWebImageSwiftUI in Frameworks */,
+				CB67CC612922EA7300FEAA21 /* SwiftUIPager in Frameworks */,
+				CB67CC6429234AF200FEAA21 /* AnimatedImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +110,8 @@
 		CB5E95242922D95800D71404 /* FunWithCATAS */ = {
 			isa = PBXGroup;
 			children = (
+				CB5E955B2922E37100D71404 /* Views */,
+				CB5E95522922D9D000D71404 /* Api */,
 				CB5E95252922D95800D71404 /* FunWithCATASApp.swift */,
 				CB5E95272922D95800D71404 /* ContentView.swift */,
 				CB5E95292922D95B00D71404 /* Assets.xcassets */,
@@ -127,6 +145,49 @@
 			path = FunWithCATASUITests;
 			sourceTree = "<group>";
 		};
+		CB5E95522922D9D000D71404 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				CB5E95582922E1D100D71404 /* Model */,
+				CB5E95542922DD0E00D71404 /* APIClient.swift */,
+				CB5E95562922DD4900D71404 /* API+Constants.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		CB5E95582922E1D100D71404 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CB5E95592922E22000D71404 /* Cats.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CB5E955B2922E37100D71404 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CB5E955F2922E40900D71404 /* ViewModels */,
+				CB5E955C2922E37F00D71404 /* View Helpers */,
+				CB5E95622922E65300D71404 /* CatsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CB5E955C2922E37F00D71404 /* View Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Helpers";
+			sourceTree = "<group>";
+		};
+		CB5E955F2922E40900D71404 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CB5E95602922E43B00D71404 /* CatsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +204,11 @@
 			dependencies = (
 			);
 			name = FunWithCATAS;
+			packageProductDependencies = (
+				CB67CC602922EA7300FEAA21 /* SwiftUIPager */,
+				CB67CC6329234AF200FEAA21 /* AnimatedImage */,
+				CB67CC6629234E0C00FEAA21 /* SDWebImageSwiftUI */,
+			);
 			productName = FunWithCATAS;
 			productReference = CB5E95222922D95800D71404 /* FunWithCATAS.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +281,11 @@
 				Base,
 			);
 			mainGroup = CB5E95192922D95800D71404;
+			packageReferences = (
+				CB67CC5F2922EA7300FEAA21 /* XCRemoteSwiftPackageReference "SwiftUIPager" */,
+				CB67CC6229234AF200FEAA21 /* XCRemoteSwiftPackageReference "SwiftUI" */,
+				CB67CC6529234E0C00FEAA21 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = CB5E95232922D95800D71404 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,8 +328,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB5E95572922DD4900D71404 /* API+Constants.swift in Sources */,
 				CB5E95282922D95800D71404 /* ContentView.swift in Sources */,
+				CB5E955A2922E22000D71404 /* Cats.swift in Sources */,
+				CB5E95612922E43B00D71404 /* CatsViewModel.swift in Sources */,
 				CB5E95262922D95800D71404 /* FunWithCATASApp.swift in Sources */,
+				CB5E95552922DD0E00D71404 /* APIClient.swift in Sources */,
+				CB5E95632922E65300D71404 /* CatsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,6 +659,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CB67CC5F2922EA7300FEAA21 /* XCRemoteSwiftPackageReference "SwiftUIPager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/fermoya/SwiftUIPager.git";
+			requirement = {
+				kind = exactVersion;
+				version = 1.9.2;
+			};
+		};
+		CB67CC6229234AF200FEAA21 /* XCRemoteSwiftPackageReference "SwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/krzyzanowskim/SwiftUI.AnimatedImage";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		CB67CC6529234E0C00FEAA21 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CB67CC602922EA7300FEAA21 /* SwiftUIPager */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB67CC5F2922EA7300FEAA21 /* XCRemoteSwiftPackageReference "SwiftUIPager" */;
+			productName = SwiftUIPager;
+		};
+		CB67CC6329234AF200FEAA21 /* AnimatedImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB67CC6229234AF200FEAA21 /* XCRemoteSwiftPackageReference "SwiftUI" */;
+			productName = AnimatedImage;
+		};
+		CB67CC6629234E0C00FEAA21 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB67CC6529234E0C00FEAA21 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CB5E951A2922D95800D71404 /* Project object */;
 }
