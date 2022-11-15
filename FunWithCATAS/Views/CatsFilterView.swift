@@ -11,7 +11,7 @@ struct CatsFilterView: View {
     @Binding var filterTag: String?
     @State private var selectedTag: String? = nil
     @State private var tagsPage = 0
-    @StateObject private var viewModel = CatsFilterViewModel()
+    @EnvironmentObject var viewModel: CatsFilterViewModel
 
     @Environment(\.presentationMode) private var presentationMode
 
@@ -49,6 +49,9 @@ struct CatsFilterView: View {
             .navigationBarTitle("Filters", displayMode: .inline)
             .navigationBarItems(leading: cancelButton,
                                 trailing: saveButton)
+            .onAppear {
+                viewModel.fetchTags()
+            }
         }
     }
 

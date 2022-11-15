@@ -19,11 +19,8 @@ class CatsFilterViewModel: ObservableObject {
 
     private let apiClient = APIClient()
 
-    init() {
-        fetchTags()
-    }
-
-    private func fetchTags() {
+    func fetchTags() {
+        guard tags.isEmpty else { return }
         let cancellable = apiClient
             .send(.tags)
             .receive(on: DispatchQueue.main)

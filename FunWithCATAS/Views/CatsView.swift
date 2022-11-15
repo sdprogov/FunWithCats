@@ -15,6 +15,8 @@ struct CatsView: View {
     @State private var isFilterViewPresented = false
     @State private var filterTag: String?
 
+    @StateObject var filterModel = CatsFilterViewModel()
+
     private let fakeUrl = URL(string: "https://www.fake.com")!
 
     var body: some View {
@@ -72,6 +74,7 @@ struct CatsView: View {
                },
                content: {
                    CatsFilterView(filterTag: $filterTag)
+                       .environmentObject(filterModel)
                })
     }
 
