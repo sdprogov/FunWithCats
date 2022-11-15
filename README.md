@@ -1,4 +1,4 @@
-% Fun with Cats App
+# Fun with Cats App
 
 
 This codebase was created to showcase my knowledge of [SwiftUI] and [Combine framework] in answering Photobooth's Tech challenge.
