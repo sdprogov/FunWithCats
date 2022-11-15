@@ -36,7 +36,11 @@ struct CatsView: View {
                             .transition(.fade) // Fade Transition
                             .clipShape(RoundedRectangle(cornerRadius: 20))
                     } else {
-                        ProgressView("Loading more cute cats ...")
+                        if isFilterSelected {
+                            Text("No more cats match this filter!")
+                        } else {
+                            ProgressView("Loading more cute cats ...")
+                        }
                     }
                 }
                 .itemSpacing(16)
@@ -48,6 +52,7 @@ struct CatsView: View {
                 .padding()
                 .onPageChanged { newPage in
                     guard newPage == viewModel.imageUrls.count - 1 else { return }
+                    guard isFilterSelected == false else { return }
                     viewModel.fetchCats()
                 }
                 .edgesIgnoringSafeArea(.bottom)
@@ -57,10 +62,16 @@ struct CatsView: View {
         }
         .sheet(isPresented: $isFilterViewPresented,
                onDismiss: {
-                   // TODO: implement filtering
+                   if let filter = filterTag {
+                       page = 0
+                       viewModel.filerCats(by: filter)
+                   } else {
+                       page = 0
+                       viewModel.reset()
+                   }
                },
                content: {
-                   CatsFilterView()
+                   CatsFilterView(filterTag: $filterTag)
                })
     }
 

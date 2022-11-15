@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct CatsFilterView: View {
+    @Binding var filterTag: String?
+    @State private var selectedTag: String? = nil
     @State private var tagsPage = 0
     @StateObject private var viewModel = CatsFilterViewModel()
 
@@ -31,8 +33,11 @@ struct CatsFilterView: View {
                                     .padding(8)
                                     .background(
                                         RoundedRectangle(cornerRadius: 8)
-                                            .fill(Color.purple.opacity(0.2))
+                                            .fill((selectedTag == item) ? Color.gray.opacity(0.2) : Color.purple.opacity(0.2))
                                     )
+                                    .onTapGesture {
+                                        selectedTag = item
+                                    }
                             }
                             .padding(.horizontal, 2.0)
                         }
@@ -50,8 +55,9 @@ struct CatsFilterView: View {
     private var cancelButton: some View {
         Button(action: {
             presentationMode.wrappedValue.dismiss()
+            filterTag = nil
         }, label: {
-            Text("Cancel")
+            Text("Clear")
                 .padding()
         })
     }
@@ -59,6 +65,7 @@ struct CatsFilterView: View {
     private var saveButton: some View {
         Button(action: {
             presentationMode.wrappedValue.dismiss()
+            filterTag = selectedTag
         }, label: {
             Text("Save")
                 .padding()
@@ -68,6 +75,6 @@ struct CatsFilterView: View {
 
 struct CatsFilterView_Previews: PreviewProvider {
     static var previews: some View {
-        CatsFilterView()
+        CatsFilterView(filterTag: .constant(nil))
     }
 }

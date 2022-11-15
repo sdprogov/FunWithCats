@@ -10,7 +10,13 @@ import Foundation
 import SwiftUI
 
 class CatsViewModel: ObservableObject {
-    @Published private var cats: Cats = []
+    @Published private var cats: Cats = [] {
+        didSet {
+            displayableCats = cats
+        }
+    }
+
+    @Published private var displayableCats: Cats = []
     private let apiClient = APIClient()
     private var skip: Int { cats.count }
     private let limit = 15
@@ -18,7 +24,7 @@ class CatsViewModel: ObservableObject {
     private var isRequesting = false
 
     var imageUrls: [URL] {
-        cats.compactMap { URL(string: "https://cataas.com/cat/\($0.id)") }
+        displayableCats.compactMap { URL(string: "https://cataas.com/cat/\($0.id)") }
     }
 
     init() {
@@ -26,8 +32,12 @@ class CatsViewModel: ObservableObject {
     }
 
     func reset() {
-        cats = []
+        displayableCats = cats
         isRequesting = false
+    }
+
+    func filerCats(by tag: String) {
+        displayableCats = cats.filter { $0.tags.contains(tag) }
     }
 
     func fetchCats() {
