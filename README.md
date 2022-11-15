@@ -1,6 +1,4 @@
-# ![Fun with Cats App](logo.png)
-
-### [Demo]&nbsp;&nbsp;&nbsp;&nbsp;[FunWithCats]
+# ![Fun with Cats App]
 
 
 This codebase was created to showcase my knowledge of [SwiftUI] and [Combine framework] in answering Photobooth's Tech challenge.
